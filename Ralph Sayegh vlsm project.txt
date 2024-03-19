@@ -1,0 +1,32 @@
+network :192.168.10.0/24
+1- accounting department : 55 hosts
+2 to power n = > 55
+2 to power 6 = 64
+
+6 remaining and 2 borrowed       class C : 255.255.255.0
+
+network ip= 192.168.10.0                                       (borrowed)/(    remaining                   )
+                                                255.255.255.  2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0
+                                                              128 + 64  + 32   + 16  +  8  + 4   + 2  + 1 
+broadcast:192.168.10.63(we add the remaining)
+subnet mask: 255.255.255.192(we add the borrowed) 128+64=192
+cidr value:/26( we add the non remaining part)
+
+
+.......................................................................................................................
+
+
+2-HRD : 25 host
+   2 to power n = > 25
+    2 to power 5 = 32 
+5 remaining and 3 borrowed
+
+
+network ip:192.168.10.64
+                                                               (borrowed      )/(     remaining             )
+                                                255.255.255.  2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1 + 2^0
+                                                              128 + 64  + 32   + 16  +  8  + 4   + 2  + 1 
+
+broadcast: 192.168.10.95(we add the remaining)
+subnet mask: 255.255.255.224
+cidr value:/27
